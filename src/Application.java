@@ -99,4 +99,5 @@ public class Application
         + "\nAddress: " + address + "\nHire Date: " + hireDate + "\nEIN: " + federalEIN + "\nSSN: " + socialSecurity;
         return output;
     }
+
 }
