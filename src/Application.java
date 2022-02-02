@@ -21,6 +21,17 @@ public class Application
         this.socialSecurity = socialSecurity;
     }
 
+    public Application ()
+    {
+        this.name = null;
+        this.email = null;
+        this.phoneNum = null;
+        this.address = null;
+        this.hireDate = null;
+        this.federalEIN = null;
+        this.socialSecurity = null;
+    }
+
     // getters
     public String getName ()
     {
