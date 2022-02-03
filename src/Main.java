@@ -24,7 +24,7 @@ public class Main
         System.out.println(application.toString());
 
         // getting initial input of email
-        System.out.println("Enter email: ");
+        System.out.println("Enter email address: ");
         email = scan.nextLine();
         // email must have @ and then .com
         while (!email.matches("^.+@.+\\.(com|net)"))
@@ -35,6 +35,20 @@ public class Main
         application.setEmail(email);
 
         System.out.println(application.toString());
+
+        // getting initial phone number input
+        System.out.println("Enter phone number: ");
+        phoneNum = scan.nextLine();
+        // email must have @ and then .com
+        while (!phoneNum.matches("\\([0-9]{3}\\)[0-9]{3}-[0-9]{4}"))
+        {
+            System.out.println("Invalid phone number format. Enter phone number: ");
+            phoneNum = scan.nextLine();
+        } // end while
+        application.setPhoneNum(phoneNum);
+
+        System.out.println(application.toString());
+
 
     } // end main method
 } // end Main class
