@@ -10,7 +10,6 @@ public class Main
         Application application = new Application();
         Scanner scan = new Scanner(System.in);
 
-        /*
         // Night 1 Phone Guy lines
         System.out.println("HELLO! IF YOU ARE HERE, YOU ARE APPLYING FOR A JOB AT FREDDY FAZBEAR\'S PIZZA AS A NIGHT GUARD. FILL OUT THE FOLLOWING INFORMATION. \nPhone Guy: Uh, let's see, first there's an introductory greeting from the company that I'm supposed to read. Uh, it's kind of a legal thing, you know. Um, Welcome to Freddy Fazbear's Pizza. \nA magical place for kids and grown-ups alike, where fantasy and fun come to life. Fazbear Entertainment is not responsible for damage to property or person. \nUpon discovering that damage or death has occurred, a missing person report will be filed within 90 days, or as soon property and premises have been thoroughly \ncleaned and bleached, and the carpets have been replaced.");
 
@@ -79,7 +78,7 @@ public class Main
         System.out.println(application.toString());
 
 
-*/
+
         // getting initial street address
         System.out.println("\nEnter your street address: ");
         streetAddress = scan.nextLine();
