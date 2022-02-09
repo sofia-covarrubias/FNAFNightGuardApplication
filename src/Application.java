@@ -4,19 +4,19 @@ public class Application
     private String name;
     private String email;
     private String phoneNum;
-    private String address;
-    private String hireDate;
+    private String streetAddress;
+    private String secondAddress;
     private String federalEIN;
     private String socialSecurity;
 
     // constructor
-    public Application (String name, String email, String phoneNum, String address, String hireDate, String federalEIN, String socialSecurity)
+    public Application (String name, String email, String phoneNum, String streetAddress, String secondAddress, String federalEIN, String socialSecurity)
     {
         this.name = name;
         this.email = email;
         this.phoneNum = phoneNum;
-        this.address = address;
-        this.hireDate = hireDate;
+        this.streetAddress = streetAddress;
+        this.secondAddress = secondAddress;
         this.federalEIN = federalEIN;
         this.socialSecurity = socialSecurity;
     }
@@ -26,8 +26,8 @@ public class Application
         this.name = null;
         this.email = null;
         this.phoneNum = null;
-        this.address = null;
-        this.hireDate = null;
+        this.secondAddress = null;
+        this.streetAddress = null;
         this.federalEIN = null;
         this.socialSecurity = null;
     }
@@ -45,13 +45,13 @@ public class Application
     {
         return phoneNum;
     }
-    public String getAddress ()
+    public String getStreetAddress ()
     {
-        return address;
+        return streetAddress;
     }
-    public String getHireDate ()
+    public String getSecondAddress ()
     {
-        return hireDate;
+        return secondAddress;
     }
     public String getFederalEIN ()
     {
@@ -75,13 +75,13 @@ public class Application
     {
         this.phoneNum = phoneNum;
     }
-    public void setAddress (String address)
+    public void setStreetAddress (String streetAddress)
     {
-        this.address = address;
+        this.streetAddress = streetAddress;
     }
-    public void setHireDate (String hireDate)
+    public void setSecondAddress (String secondAddress)
     {
-        this.hireDate = hireDate;
+        this.secondAddress = secondAddress;
     }
     public void setFederalEIN (String federalEIN)
     {
@@ -92,12 +92,46 @@ public class Application
         this.socialSecurity = socialSecurity;
     }
 
+    // user input validation
+    public void validateName ()
+    {
+
+    }
+    public void validateEmail ()
+    {
+
+    }
+    public void validatePhoneNum ()
+    {
+
+    }
+    public void validateStreetAddress ()
+    {
+
+    }
+    public void validateSecondAddress ()
+    {
+
+    }
+    public void validateFederalEIN ()
+    {
+
+    }
+    public void validateSocialSecurity ()
+    {
+
+    }
+
+
+
+
     // methods
     public String toString ()
     {
         String output = "Name: " + name + "\nEmail: " + email + "\nPhone Number: " + phoneNum
-        + "\nAddress: " + address + "\nHire Date: " + hireDate + "\nEIN: " + federalEIN + "\nSSN: " + socialSecurity;
+        + "\nStreet Address: " + streetAddress + "\nCity, State, Zipcode: " + secondAddress + "\nEIN: " + federalEIN + "\nSSN: " + socialSecurity;
         return output;
     }
+
 
 }

@@ -5,6 +5,9 @@ public class Main
 {
     public static void main (String[] args)
     {
+        Application application1 = new Application ("SoFiA 123", "sofia@.com", "(sss)sss-ssss", "123 123 st", "Bro, ca 555", "12-121 152", "sss-12-1255");
+
+        /*
         // variables and objects instantiation
         String name, email, phoneNum, streetAddress, secondAddress, federalEIN, socialSecurity;
         Application application = new Application();
@@ -99,7 +102,9 @@ public class Main
         application.setAddress(streetAddress + ", " + secondAddress);
 
         System.out.println(application.toString());
-
+        */
 
     } // end main method
+
+
 } // end Main class
