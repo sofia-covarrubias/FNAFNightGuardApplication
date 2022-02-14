@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Application
 {
     // instance variables
@@ -8,6 +10,9 @@ public class Application
     private String secondAddress;
     private String federalEIN;
     private String socialSecurity;
+
+    // Scanner
+    Scanner scan = new Scanner (System.in);
 
     // constructor
     public Application (String name, String email, String phoneNum, String streetAddress, String secondAddress, String federalEIN, String socialSecurity)
@@ -93,33 +98,76 @@ public class Application
     }
 
     // user input validation
-    public void validateName ()
+    public String validateName (String name)
     {
-
+        String nameInput = name;
+        while (!nameInput.matches("^[\\p{L} .'-]+$"))
+        {
+            System.out.println("Must be all letters. Enter full name: ");
+            nameInput = scan.nextLine();
+        } // end while
+        setName(nameInput); // when name is validated, set object name attribute
+        return nameInput;
     }
-    public void validateEmail ()
+    public void validateEmail (String email)
     {
-
+        String emailInput = email;
+        while (!emailInput.matches("^.+@.+\\.(com|net)"))
+        {
+            System.out.println("Invalid email format. Must be the following format: username@domain.com or net.\nEnter email address: ");
+            emailInput = scan.nextLine();
+        } // end while
+        setEmail(emailInput);
     }
-    public void validatePhoneNum ()
+    public void validatePhoneNum (String phoneNum)
     {
-
+        String phoneNumInput = phoneNum;
+        while (!phoneNumInput.matches("\\([0-9]{3}\\)[0-9]{3}-[0-9]{4}"))
+        {
+            System.out.println("Invalid phone number format. Must be in following format: (951)123-4567. \nEnter phone number: ");
+            phoneNumInput = scan.nextLine();
+        }
+        setPhoneNum(phoneNumInput);
     }
-    public void validateStreetAddress ()
+    public void validateStreetAddress (String streetAddress)
     {
-
+        String streetAddressInput = streetAddress;
+        while (!streetAddressInput.matches("[0-9]{1,5} [A-Za-z]+ (st|ave|dr|cir|blvd)"))
+        {
+            System.out.println("Invalid street address. Must be in the following format: 123 bro st/ave/dr/cir/blvd. \nEnter street address: ");
+            streetAddressInput = scan.nextLine();
+        }
+        setStreetAddress(streetAddressInput);
     }
-    public void validateSecondAddress ()
+    public void validateSecondAddress (String secondAddress)
     {
-
+        String secondAddressInput = secondAddress;
+        while (!secondAddressInput.matches("[A-Za-z]+, \\p{Alpha}{2} [0-9]{5}"))
+        {
+            System.out.println("Invalid format. Must be in the following format: Perris, CA 92558. \nEnter city, state, and zipcode: ");
+            secondAddressInput = scan.nextLine();
+        }
+        setSecondAddress(secondAddressInput);
     }
-    public void validateFederalEIN ()
+    public void validateFederalEIN (String federalEIN)
     {
-
+        String federalEINInput = federalEIN;
+        while (!federalEINInput.matches("[0-9]{2}-[0-9]{7}"))
+        {
+            System.out.println("Invalid EIN. Must be in the following format: 12-1234567. \\nEnter EIN: ");
+            federalEINInput = scan.nextLine();
+        }
+        setFederalEIN(federalEINInput);
     }
-    public void validateSocialSecurity ()
+    public void validateSocialSecurity (String socialSecurity)
     {
-
+        String socialSecurityInput = socialSecurity;
+        while (!socialSecurityInput.matches("[0-9]{3}-[0-9]{2}-[0-9]{4}"))
+        {
+            System.out.println("Invalid SSN. Must be in the following format: 123-45-6789. \nEnter SSN: ");
+            socialSecurityInput = scan.nextLine();
+        }
+        setSocialSecurity(socialSecurityInput);
     }
 
 

@@ -1,3 +1,5 @@
+import jdk.jfr.StackTrace;
+
 import java.util.regex.*;
 import java.util.Scanner;
 
@@ -5,7 +7,47 @@ public class Main
 {
     public static void main (String[] args)
     {
-        Application application1 = new Application ("SoFiA 123", "sofia@.com", "(sss)sss-ssss", "123 123 st", "Bro, ca 555", "12-121 152", "sss-12-1255");
+
+        Application jeremy = new Application ();
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("What is your name? ");
+        String name = scan.nextLine();
+        jeremy.validateName(name);
+        System.out.println(jeremy.getName());
+
+        System.out.println("What is your email? ");
+        String email = scan.nextLine();
+        jeremy.validateEmail(email);
+        System.out.println(jeremy.getEmail());
+
+        System.out.println("What is your phone number? ");
+        String phoneNum = scan.nextLine();
+        jeremy.validatePhoneNum(phoneNum);
+        System.out.println(jeremy.getPhoneNum());
+
+        System.out.println("What is your federal EIN? ");
+        String federalEIN = scan.nextLine();
+        jeremy.validateFederalEIN(federalEIN);
+        System.out.println(jeremy.getFederalEIN());
+
+        System.out.println("What is your social security number? ");
+        String socialSecurity = scan.nextLine();
+        jeremy.validateSocialSecurity(socialSecurity);
+        System.out.println(jeremy.getSocialSecurity());
+
+        System.out.println("What is your street address? ");
+        String streetAddress = scan.nextLine();
+        jeremy.validateStreetAddress(streetAddress);
+        System.out.println(jeremy.getStreetAddress());
+
+        System.out.println("What is your second address? ");
+        String secondAddress = scan.nextLine();
+        jeremy.validateSecondAddress(secondAddress);
+        System.out.println(jeremy.getSecondAddress());
+
+
+
 
         /*
         // variables and objects instantiation
